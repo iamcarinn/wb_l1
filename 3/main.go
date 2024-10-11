@@ -1,3 +1,9 @@
+/*
+Дана последовательность чисел: 2,4,6,8,10.
+Найти сумму их квадратов(22+32+42….)
+с использованием конкурентных вычислений.
+*/
+
 package main
 
 import (
@@ -11,11 +17,11 @@ func main() {
 		fmt.Printf("%d ", num)
 	}
 	fmt.Printf("\n")
-	result := SumSquares(nums)
+	result := sumSquares(nums)
 	fmt.Printf("Sum of squares: %d\n", result)
 }
 
-func SumSquares(nums []int) int {
+func sumSquares(nums []int) int {
 	var wg sync.WaitGroup
 	ch := make(chan int, len(nums))
 

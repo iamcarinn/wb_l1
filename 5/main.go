@@ -46,6 +46,7 @@ func main() {
 	fmt.Println("Время вышло! Программа завершена")
 }
 
+// Отправка в канал
 func send(ch chan int, stop <-chan time.Time) {
 	i := 0
 	for {
@@ -59,6 +60,7 @@ func send(ch chan int, stop <-chan time.Time) {
 	}
 }
 
+// Чтение из канала
 func read(ch chan int, stop <-chan time.Time) {
 	for {
 		select {

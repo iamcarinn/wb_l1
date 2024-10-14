@@ -20,7 +20,7 @@ func typesAnimal(an []string) []string {
 	fmt.Println("Пересчитаем животных:", myMap)
 
 	// Добавим все ключи из мапы в результирующее множество
-	for animal, _ := range myMap {
+	for animal := range myMap {
 		res = append(res, animal)
 	}
 

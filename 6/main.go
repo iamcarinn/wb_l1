@@ -118,7 +118,7 @@ func stopByAtomic() {
 // Остановка с использованием context.Context
 func stopByContext() {
 	fmt.Println("\nОстановка с использованием context.Context:")
-	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)	// вызвращает контекст и функ. отмены, при этом сам по таймеру отменится
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)	// возвращает контекст и функ. отмены, при этом сам по таймеру отменится
 
 	go func(ctx context.Context) {
 		for {
